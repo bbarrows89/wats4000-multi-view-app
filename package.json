@@ -2,7 +2,7 @@
   "name": "multi-view-app",
   "version": "1.0.0",
   "description": "A project for practicing with user input and multiple routes.",
-  "author": "Shawn Rider <shawn@shawnrider.com>",
+  "author": "Bryan Barrows <bryanbarrows@live.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
