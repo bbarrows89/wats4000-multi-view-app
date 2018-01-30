@@ -8,30 +8,26 @@
 
       <form v-on:submit.prevent="validateForm">
 
-      <p>
-        <label for="username">Username
-          <input type="text" id="username" v-model="username">
-        </label>
-      </p>
-
-      <p>
-        <label for="email"> Email
-          <input type="email" id="email" v-model="email">
-        </label>
-      </p>
-
-      <p>
-        <label for="password">Password
-          <input type="password" id="password" v-model="password">
-        </label>
-      </p>
-        
-      <p>
-        <label for="passwordVerify">Verify Password
-          <input type="password" id="passwordVerify" v-model="passwordVerify">
-        </label>
-      </p>
-
+        <p>
+          <label for="username">Username
+            <input type="text" id="username" v-model="username">
+          </label>
+        </p>
+        <p>
+          <label for="email"> Email
+            <input type="email" id="email" v-model="email">
+          </label>
+        </p>
+        <p>
+          <label for="password">Password
+            <input type="password" id="password" v-model="password">
+          </label>
+        </p>
+        <p>
+          <label for="passwordVerify">Verify Password
+            <input type="password" id="passwordVerify" v-model="passwordVerify">
+          </label>
+        </p>
 
         <p><input type="submit" value="Submit"></p>
       </form>
