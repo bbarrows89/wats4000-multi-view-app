@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="form-container"><!-- TODO: Modulate display of the .form-container using v-show and the showForm variable. -->
+    <div class="form-container" v-show="showForm">
       <h1>Join the Web Developers Club!</h1>
       <p>Sign up to access our special, secret page. Just create an account and answer a brief survey.</p>
 
@@ -22,7 +22,7 @@
         <p><input type="submit" value="Submit"></p>
       </form>
     </div>
-    <div class="success-message"><!-- TODO: Modulate display of the .success-message using v-show and the showForm variable. -->
+    <div class="success-message" v-show="!showForm">
       <h1>Thank you for signing up!</h1>
       <p>Please take our new member survey. Click here</p><!-- TODO: Link "Click here" to the survey page. -->
     </div>
