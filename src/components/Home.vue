@@ -4,10 +4,7 @@
       <h1>Join the Web Developers Club!</h1>
       <p>Sign up to access our special, secret page. Just create an account and answer a brief survey.</p>
       <p class="error" v-show="showError">Please check the information you have entered. Be sure to fill in all fields.</p>
-      <!-- TODO: Add an HTML element to display an error message for when the user submits invalid information. Use v-show to show/hide this message based on the validity of the form data. -->
-
       <form v-on:submit.prevent="validateForm">
-
         <p>
           <label for="username">Username
             <input type="text" id="username" v-model="username">
@@ -28,7 +25,6 @@
             <input type="password" id="passwordVerify" v-model="passwordVerify">
           </label>
         </p>
-
         <p><input type="submit" value="Submit"></p>
       </form>
     </div>
@@ -54,14 +50,15 @@ export default {
   },
   methods: {
     validateForm: function () {
-      // Validate the form by checking the following values:
-      // username must not be blank
-      // email must not be blank
-      // password and passwordVerify must be equal
-      //
-      // When the form is validated, show the .success-message content
-      // If the form is invalid, show the form error message
-
+      if ((this.username != '') &&
+          (this.email != '') &&
+          (this.password === this.passwordVerify)){
+        // Form data is valid, so turn off the form to show the success message.
+        this.showForm = false;
+      } else {
+        // Form data is NOT valid, so show the error message.
+        this.showError = true;
+      }
     }
   }
 }
