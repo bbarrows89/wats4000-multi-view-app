@@ -8,15 +8,29 @@
 
       <form v-on:submit.prevent="validateForm">
 
-        <!-- TODO: Add labels for each form field in this form. -->
+      <p>
+        <label for="username">Username
+          <input type="text" id="username" v-model="username">
+        </label>
+      </p>
 
-        <!-- TODO: Add a username field. -->
+      <p>
+        <label for="email"> Email
+          <input type="email" id="email" v-model="email">
+        </label>
+      </p>
 
-        <!-- TODO: Add an email field. -->
-
-        <!-- TODO: Add a password field. -->
-
-        <!-- TODO: Add a passwordVerify field. -->
+      <p>
+        <label for="password">Password
+          <input type="password" id="password" v-model="password">
+        </label>
+      </p>
+        
+      <p>
+        <label for="passwordVerify">Verify Password
+          <input type="password" id="passwordVerify" v-model="passwordVerify">
+        </label>
+      </p>
 
 
         <p><input type="submit" value="Submit"></p>
