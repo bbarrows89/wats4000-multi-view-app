@@ -3,10 +3,10 @@
     <div class="form-container" v-show="showForm">
       <h1>Join the Web Developers Club!</h1>
       <p>Sign up to access our special, secret page. Just create an account and answer a brief survey.</p>
-
+      <p class="error" v-show="showError">Please check the information you have entered. Be sure to fill in all fields.</p>
       <!-- TODO: Add an HTML element to display an error message for when the user submits invalid information. Use v-show to show/hide this message based on the validity of the form data. -->
 
-      <form><!-- TODO: Add the proper v-on directive to let the validateForm method handle this form when it is submitted -->
+      <form v-on:submit.prevent="validateForm">
 
         <!-- TODO: Add labels for each form field in this form. -->
 
