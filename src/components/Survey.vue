@@ -98,16 +98,17 @@ export default {
   },
   methods: {
     validateForm: function () {
-      // TODO: Validate the data submitted by the user according to these rules:
-      // q1 must not be blank
-      // q2.length must be greater than 0
-      // q3.length must be greater than 0
-      // q4 must not be blank
-      // q5 must not be blank
+      if ((this.q1 != '') &&
+        (this.q2.length > 0) &&
+        (this.q3.length > 0) &&
+        (this.q4 != '') &&
+        (this.q5 != '')) {
 
-      // TODO: If all of the data is valid, then use the $router to move the user to the Secret page.
-      // TODO: If the data is not valid, alter the value of showError to show the error message.
-
+        // form is valid
+        this.$router.push('Secret');
+      } else {
+        this.showError = true;
+      }
     }
   }
 }
